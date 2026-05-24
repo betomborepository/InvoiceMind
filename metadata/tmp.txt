@@ -1,0 +1,12 @@
+une facture PDF simple,
+une facture XML UBL,
+une facture CII,
+une facture avec des champs manquants,
+
+une facture en français,
+une facture en anglais,
+une facture avec plusieurs lignes,
+une facture avec TVA,
+une facture sans TVA
+
+une facture scannée si possible, à implémenté plus tard 

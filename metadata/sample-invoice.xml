@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <ID>FAC-2024-042</ID>
+  <IssueDate>2024-03-15</IssueDate>
+  <DueDate>2024-04-14</DueDate>
+  <DocumentCurrencyCode>EUR</DocumentCurrencyCode>
+  <AccountingSupplierParty>
+    <Party>
+      <PartyName><Name>Acme Services SAS</Name></PartyName>
+      <PartyLegalEntity><CompanyID schemeID="0002">123456789</CompanyID></PartyLegalEntity>
+    </Party>
+  </AccountingSupplierParty>
+  <AccountingCustomerParty>
+    <Party>
+      <PartyName><Name>Client Demo SARL</Name></PartyName>
+      <PartyLegalEntity><CompanyID schemeID="0002">987654321</CompanyID></PartyLegalEntity>
+    </Party>
+  </AccountingCustomerParty>
+  <LegalMonetaryTotal>
+    <TaxExclusiveAmount currencyID="EUR">1000.00</TaxExclusiveAmount>
+    <TaxInclusiveAmount currencyID="EUR">1200.00</TaxInclusiveAmount>
+  </LegalMonetaryTotal>
+  <TaxTotal>
+    <TaxAmount currencyID="EUR">200.00</TaxAmount>
+  </TaxTotal>
+  <PaymentTerms>
+    <Note>Net 30 days</Note>
+  </PaymentTerms>
+</Invoice>
