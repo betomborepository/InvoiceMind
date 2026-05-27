@@ -59,7 +59,7 @@ export default function HomePage() {
           InvoiceMind
         </h1>
         <p className="mt-2 text-slate-600">
-          Upload or paste an invoice — AI extracts structured JSON fields.
+        Upload your invoice — InvoiceMind extracts, checks, and organizes the details.
         </p>
       </header>
 
@@ -99,9 +99,7 @@ export default function HomePage() {
       </div>
 
       <footer className="mt-8 text-center text-xs text-slate-500">
-        V1 — OpenAI runs server-side only. Configure{" "}
-        <code className="rounded bg-slate-100 px-1">OPENAI_API_KEY</code> in{" "}
-        <code className="rounded bg-slate-100 px-1">.env.local</code>.
+          © 2026 InvoiceMind. AI-powered invoice analysis. All rights reserved.
       </footer>
     </main>
   );

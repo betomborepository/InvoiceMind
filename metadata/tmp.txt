@@ -1,12 +1,8 @@
-une facture PDF simple,
-une facture XML UBL,
-une facture CII,
-une facture avec des champs manquants,
+déplacer missing field en haut
 
-une facture en français,
-une facture en anglais,
-une facture avec plusieurs lignes,
-une facture avec TVA,
-une facture sans TVA
+retirer json 
+retir l’onglet 
+ajouter un boutton copy 
 
-une facture scannée si possible, à implémenté plus tard 
+
+le bouton copy doit copier un text et non un json tu me propose quoi

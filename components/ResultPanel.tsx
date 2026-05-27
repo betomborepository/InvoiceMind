@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import { ResultSummary } from "@/components/ResultSummary";
+import { copyTextToClipboard } from "@/lib/copyToClipboard";
+import { formatInvoiceResultAsText } from "@/lib/formatInvoiceResultAsText";
 import type { InvoiceAnalysisResult } from "@/lib/types/invoice";
+
+type CopyStatus = "idle" | "copied" | "failed";
 
 interface ResultPanelProps {
   loading: boolean;
@@ -11,17 +15,14 @@ interface ResultPanelProps {
 }
 
 export function ResultPanel({ loading, error, result }: ResultPanelProps) {
-  const [copied, setCopied] = useState(false);
+  const [copyStatus, setCopyStatus] = useState<CopyStatus>("idle");
 
   async function handleCopy() {
     if (!result) return;
-    try {
-      await navigator.clipboard.writeText(JSON.stringify(result, null, 2));
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      /* clipboard unavailable */
-    }
+
+    const ok = await copyTextToClipboard(formatInvoiceResultAsText(result));
+    setCopyStatus(ok ? "copied" : "failed");
+    window.setTimeout(() => setCopyStatus("idle"), 2500);
   }
 
   return (
@@ -32,7 +33,7 @@ export function ResultPanel({ loading, error, result }: ResultPanelProps) {
       <PanelHeader
         result={result}
         loading={loading}
-        copied={copied}
+        copyStatus={copyStatus}
         onCopy={handleCopy}
       />
 
@@ -90,12 +91,12 @@ export function ResultPanel({ loading, error, result }: ResultPanelProps) {
 function PanelHeader({
   result,
   loading,
-  copied,
+  copyStatus,
   onCopy,
 }: {
   result: InvoiceAnalysisResult | null;
   loading: boolean;
-  copied: boolean;
+  copyStatus: CopyStatus;
   onCopy: () => void;
 }) {
   return (
@@ -111,7 +112,11 @@ function PanelHeader({
             onClick={onCopy}
             className="shrink-0 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors hover:bg-slate-50"
           >
-            {copied ? "Copied!" : "Copy JSON"}
+            {copyStatus === "copied"
+              ? "Copied!"
+              : copyStatus === "failed"
+                ? "Copy failed"
+                : "Copy summary"}
           </button>
         )}
       </div>
