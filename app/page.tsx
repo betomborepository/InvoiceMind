@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { AnalyzeButton } from "@/components/AnalyzeButton";
 import { ContentTextarea } from "@/components/ContentTextarea";
 import { FileUpload } from "@/components/FileUpload";
@@ -21,6 +22,11 @@ export default function HomePage() {
       setError("Upload a file or paste document content.");
       return;
     }
+
+    track("Invoice Analyze Clicked", {
+      hasFile: Boolean(file),
+      hasPastedText: Boolean(text.trim()),
+    });
 
     setLoading(true);
     setError(null);

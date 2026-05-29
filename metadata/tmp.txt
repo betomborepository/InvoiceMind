@@ -5,4 +5,55 @@ retir l’onglet
 ajouter un boutton copy 
 
 
-le bouton copy doit copier un text et non un json tu me propose quoi
+-------- Script vidéo --------------
+
+Bonjour, je vous présente InvoiceMind.
+C’est une application qui permet d’uploader ou de coller une facture, 
+puis d’utiliser l’IA pour extraire automatiquement les informations importantes.
+
+Par exemple, l’application peut récupérer le numéro de facture, la date, le vendeur, l’acheteur, les montants, la TVA et le total TTC.
+
+L’objectif est d’avoir une vue claire et lisible pour l’utilisateur.
+On peut aussi afficher des alertes lorsqu’une information est manquante ou doit être vérifiée.
+
+Ce projet me permet d’explorer comment l’IA peut simplifier la lecture et le contrôle des factures.
+InvoiceMind est encore en amélioration, mais la base est déjà fonctionnelle :
+
+Pour vous montrer comment cela fonctionne.
+
+ on ajoute une facture, l’IA l’analyse, et on obtient un résultat structuré.
+
+ Comme je vous l’ai dit elle est encore en cours  d’amélioration, pour donner
+ plus de conforts et de résultats à ce que l’utilisateur a besoin .
+
+----------- amélioration -----------
+
+
+
+--------- Contact comptable---------
+https://www.linkedin.com/in/aswin-kumar-mawah-8243461a4/
+https://www.linkedin.com/in/maisha-beesoon-3293291b9/
+https://www.linkedin.com/in/maryam-meeajun-5ab585273/
+
+----------- Script Linkedin ---------
+Bonjour, je développe InvoiceMind, une app IA pour analyser des factures. Je cherche des testeurs. 
+Démo : https://www.loom.com/share/77185d23951c4d458b93967632263c0a
+
+Bonjour,
+
+
+
+Je développe actuellement InvoiceMind, une application IA qui analyse automatiquement des factures.
+
+Est-ce  que vous pouvez me donner un avis. Mon but est d’identitifer les pain point et orienter,
+changer le concepte en fonction des vrai utilisateurs. 
+
+J’ai un démo vidéo ici: https://www.loom.com/share/77185d23951c4d458b93967632263c0a
+
+
+Bonjour, je développe une app qui analyse une facture. J’ai une petite démo ici :
+https://www.loom.com/share/77185d23951c4d458b93967632263c0a
+J’ai besoin de votre aide. Je voudrais avoir des conseils : quels sont les pain points des personnes qui utilisent une facture ou qui en créent ?
+Cela me permettra ensuite de réorienter les fonctionnalités que j’ai en ce moment.
+Merci.
+
